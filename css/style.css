@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.rectangle {
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    transition: all 0.5s ease;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arrow and text */
+.arrow-container {
+    position: absolute;
+    top: -100px; /* Moves arrow above the rectangle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-text {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Big arrow */
+.big-arrow {
+    width: 20;
+    height: 200;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 60px solid rgb(207, 50, 50);
+    animation: bounce 1s infinite;
+}
+
+/* Animation for the arrow */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
